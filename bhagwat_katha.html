@@ -40,30 +40,19 @@
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="css/AudioPlayer.css">
     <style>
-        header {
-            text-align: left;
-            /*color: #fff;
-            background: #ffa200;*/
-            background-image: url("photos/dada_03.jpeg");
-            background-repeat: no-repeat;
-            height: 100vh;
-            background-size: cover;
-            background-position: left;
-        }
 
-        header .container {
-            padding-top: 126px;
-            padding-bottom: 100%;
-        }
-
-        h3 {
-            color: whitesmoke;
-            font-style: italic;
-            /* text-decoration: underline;
-            text-underline-position: under; */
-        }
+    #player{
+        position: relative;
+        max-width: 700px;
+        height: 500px;
+        border: solid 1px gray;
+    }
     </style>
+
+ 
 
 </head>
 
@@ -84,395 +73,199 @@
         </div>
         <!-- /.container-fluid -->
     </nav>
+    
+    
 
-    <!-- Header 
+    <!-- Header  -->
     <header>
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <audio controls>
-                        <source src="https://drive.google.com/uc?export=download&id=0B2WPWsiJ_nRZRnZtNi1zWnV1TVE" type="audio/mpeg">
-                    </audio>
-                    <div class="intro-text">
-                        <span class="skills">|| भाग १ ||</span>
-                    </div>
+                    <h2>श्रीमद् भागवत कथा</h2>
+                    <!-- <hr class="star-primary"> -->
+                    - श्रीकृष्णकृपांकित श्री.विकासानंद महाराज मिसाळ,<br>श्रीक्षेत्र - पिंपळगाव वाघा , ता.जि.अ.नगर
                 </div>
             </div>
         </div>
-    </header> -->
+    </header>
 
-    <section id="portfolio">
+    <!-- Audio player container-->
+    <div id='player'></div>
+
+    <!-- Audio player js begin-->
+    <script src="js/AudioPlayer.js"></script>
+
+    <script>
+        // test image for web notifications
+        var iconImage = null;
+
+        AP.init({
+            container:'#player',//a string containing one CSS selector
+            volume   : 0.7,
+            autoPlay : true,
+            notification: false,
+            playList: [
+                {'icon': iconImage, 'title': 'भाग १', 'file': 'https://drive.google.com/uc?export=download&id=0B2WPWsiJ_nRZSTZtZWM1cTBaOGc'},
+                {'icon': iconImage, 'title': 'भाग २', 'file': 'https://drive.google.com/uc?export=download&id=0B2WPWsiJ_nRZbkZpMmhfcmNUUk0'},
+                {'icon': iconImage, 'title': 'भाग ३', 'file': 'https://drive.google.com/uc?export=download&id=0B2WPWsiJ_nRZU2FjQWlEQVQ3Z0U'},
+                {'icon': iconImage, 'title': 'भाग ४', 'file': 'https://drive.google.com/uc?export=download&id=0B2WPWsiJ_nRZSDJIWV9pd1huSHM'},
+                {'icon': iconImage, 'title': 'भाग ५', 'file': 'https://drive.google.com/uc?export=download&id=0B2WPWsiJ_nRZd0QtQkJRY2diZ2s'},
+                {'icon': iconImage, 'title': 'भाग ६', 'file': 'https://drive.google.com/uc?export=download&id=0B2WPWsiJ_nRZcXlGZGV1SDZvckk'},
+                {'icon': iconImage, 'title': 'भाग ७', 'file': 'https://drive.google.com/uc?export=download&id=0B2WPWsiJ_nRZZm92aWY1OVNOakk'},
+                {'icon': iconImage, 'title': 'भाग ८', 'file': 'https://drive.google.com/uc?export=download&id=0B2WPWsiJ_nRZYi1WU2Y3QV9RdFk'}
+          ]
+        });
+    </script>
+    <!-- Audio player js end-->
+
+    <!-- <section id="portfolio">
         <div class="container">
             
-            <!-- Sant Katha Section -->
-			<div class="row">
+            <div class="row">
                 <div class="col-lg-12 text-center">
                     <h2>श्रीमद् भागवत कथा</h2>
                     <hr class="star-primary">
                 </div>
             </div>
-			<div class="row">                
+            <div class="row">                
                 <div class="col-sm-4 portfolio-item">
-					<div class="portfolio-link" data-toggle="modal" style="background-color:#1FA4B6;border: 2px dotted;">
-						<div class="col-lg-12 text-center">
-							<h3>श्रीमद् भागवत कथा- दिवस १</h3>
-						</div>
-						<div class=" text-center" style="background-color:#1FA4B6;margin-bottom: 2%;">
+                    <div class="portfolio-link" data-toggle="modal" style="background-color:#1FA4B6;border: 2px dotted;">
+                        <div class="col-lg-12 text-center">
+                            <h3>श्रीमद् भागवत कथा- दिवस १</h3>
+                        </div>
+                        <div class=" text-center" style="background-color:#1FA4B6;margin-bottom: 2%;">
                             <h4 class="fa fa-download"> भाग १</h4>
-							<audio controls>
+                            <audio controls>
                                 <source src="https://drive.google.com/uc?export=download&id=0B2WPWsiJ_nRZSTZtZWM1cTBaOGc" type="audio/mpeg">
                             </audio>
-						</div>
-						<div style="text-align: center;"><div id="circle"> </div><div id="circle"> </div><div id="circle"> </div></div>
-					</div>
+                        </div>
+                        <div style="text-align: center;"><div id="circle"> </div><div id="circle"> </div><div id="circle"> </div></div>
+                    </div>
                 </div>
-				<div class="col-sm-4 portfolio-item">
-					<div class="portfolio-link" data-toggle="modal" style="background-color:#1FA4B6;border: 2px dotted;">
-						<div class="col-lg-12 text-center">
-							<h3>श्रीमद् भागवत कथा- दिवस २</h3>
-						</div>
-						<div class=" text-center" style="background-color:#1FA4B6;margin-bottom: 2%;">
+                <div class="col-sm-4 portfolio-item">
+                    <div class="portfolio-link" data-toggle="modal" style="background-color:#1FA4B6;border: 2px dotted;">
+                        <div class="col-lg-12 text-center">
+                            <h3>श्रीमद् भागवत कथा- दिवस २</h3>
+                        </div>
+                        <div class=" text-center" style="background-color:#1FA4B6;margin-bottom: 2%;">
                             <h4 class="fa fa-download"> भाग १</h4>
                             <audio controls>
                                 <source src="https://drive.google.com/uc?export=download&id=0B2WPWsiJ_nRZbkZpMmhfcmNUUk0" type="audio/mpeg">
                             </audio>
-						</div>
-						<div style="text-align: center;"><div id="circle"> </div><div id="circle"> </div><div id="circle"> </div></div>
-					</div>
+                        </div>
+                        <div style="text-align: center;"><div id="circle"> </div><div id="circle"> </div><div id="circle"> </div></div>
+                    </div>
                 </div>
-				<div class="col-sm-4 portfolio-item">
-					<div class="portfolio-link" data-toggle="modal" style="background-color:#1FA4B6;border: 2px dotted;">
-						<div class="col-lg-12 text-center">
-							<h3>श्रीमद् भागवत कथा- दिवस ३</h3>
-						</div>
-						<div class=" text-center" style="background-color:#1FA4B6;margin-bottom: 2%;">
+                <div class="col-sm-4 portfolio-item">
+                    <div class="portfolio-link" data-toggle="modal" style="background-color:#1FA4B6;border: 2px dotted;">
+                        <div class="col-lg-12 text-center">
+                            <h3>श्रीमद् भागवत कथा- दिवस ३</h3>
+                        </div>
+                        <div class=" text-center" style="background-color:#1FA4B6;margin-bottom: 2%;">
                             <h4 class="fa fa-download"> भाग १</h4>
                             <audio controls>
                                 <source src="https://drive.google.com/uc?export=download&id=0B2WPWsiJ_nRZU2FjQWlEQVQ3Z0U" type="audio/mpeg">
                             </audio>
-						</div>
-						<div style="text-align: center;"><div id="circle"> </div><div id="circle"> </div><div id="circle"> </div></div>
-					</div>
+                        </div>
+                        <div style="text-align: center;"><div id="circle"> </div><div id="circle"> </div><div id="circle"> </div></div>
+                    </div>
                 </div>
-				<div class="col-sm-4 portfolio-item">
-					<div class="portfolio-link" data-toggle="modal" style="background-color:#1FA4B6;border: 2px dotted;">
-						<div class="col-lg-12 text-center">
-							<h3>श्रीमद् भागवत कथा- दिवस ४</h3>
-						</div>
-						<div class=" text-center" style="background-color:#1FA4B6;margin-bottom: 2%;">
+                <div class="col-sm-4 portfolio-item">
+                    <div class="portfolio-link" data-toggle="modal" style="background-color:#1FA4B6;border: 2px dotted;">
+                        <div class="col-lg-12 text-center">
+                            <h3>श्रीमद् भागवत कथा- दिवस ४</h3>
+                        </div>
+                        <div class=" text-center" style="background-color:#1FA4B6;margin-bottom: 2%;">
                             <h4 class="fa fa-download"> भाग १</h4>
                             <audio controls>
                                 <source src="https://drive.google.com/uc?export=download&id=0B2WPWsiJ_nRZSDJIWV9pd1huSHM" type="audio/mpeg">
                             </audio>
-						</div>
-						<div style="text-align: center;"><div id="circle"> </div><div id="circle"> </div><div id="circle"> </div></div>
-					</div>
+                        </div>
+                        <div style="text-align: center;"><div id="circle"> </div><div id="circle"> </div><div id="circle"> </div></div>
+                    </div>
                 </div>
-				<div class="col-sm-4 portfolio-item">
-					<div class="portfolio-link" data-toggle="modal" style="background-color:#1FA4B6;border: 2px dotted;">
-						<div class="col-lg-12 text-center">
-							<h3>श्रीमद् भागवत कथा- दिवस ५</h3>
-						</div>
-						<div class=" text-center" style="background-color:#1FA4B6;margin-bottom: 2%;">
+                <div class="col-sm-4 portfolio-item">
+                    <div class="portfolio-link" data-toggle="modal" style="background-color:#1FA4B6;border: 2px dotted;">
+                        <div class="col-lg-12 text-center">
+                            <h3>श्रीमद् भागवत कथा- दिवस ५</h3>
+                        </div>
+                        <div class=" text-center" style="background-color:#1FA4B6;margin-bottom: 2%;">
                             <h4 class="fa fa-download"> भाग १</h4>
                             <audio controls>
                                 <source src="https://drive.google.com/uc?export=download&id=0B2WPWsiJ_nRZd0QtQkJRY2diZ2s" type="audio/mpeg">
                             </audio>
-						</div>
-						<div style="text-align: center;"><div id="circle"> </div><div id="circle"> </div><div id="circle"> </div></div>
-					</div>
+                        </div>
+                        <div style="text-align: center;"><div id="circle"> </div><div id="circle"> </div><div id="circle"> </div></div>
+                    </div>
                 </div>
-				<div class="col-sm-4 portfolio-item">
-					<div class="portfolio-link" data-toggle="modal" style="background-color:#1FA4B6;border: 2px dotted;">
-						<div class="col-lg-12 text-center">
-							<h3>श्रीमद् भागवत कथा- दिवस ६</h3>
-						</div>
-						<div class=" text-center" style="background-color:#1FA4B6;margin-bottom: 2%;">
+                <div class="col-sm-4 portfolio-item">
+                    <div class="portfolio-link" data-toggle="modal" style="background-color:#1FA4B6;border: 2px dotted;">
+                        <div class="col-lg-12 text-center">
+                            <h3>श्रीमद् भागवत कथा- दिवस ६</h3>
+                        </div>
+                        <div class=" text-center" style="background-color:#1FA4B6;margin-bottom: 2%;">
                             <h4 class="fa fa-download"> भाग १</h4>
                             <audio controls>
                                 <source src="https://drive.google.com/uc?export=download&id=0B2WPWsiJ_nRZcXlGZGV1SDZvckk" type="audio/mpeg">
                             </audio>
-						</div>
-						<div style="text-align: center;"><div id="circle"> </div><div id="circle"> </div><div id="circle"> </div></div>
-					</div>
+                        </div>
+                        <div style="text-align: center;"><div id="circle"> </div><div id="circle"> </div><div id="circle"> </div></div>
+                    </div>
                 </div>
-				<div class="col-sm-4 portfolio-item">
-					<div class="portfolio-link" data-toggle="modal" style="background-color:#1FA4B6;border: 2px dotted;">
-						<div class="col-lg-12 text-center">
-							<h3>श्रीमद् भागवत कथा- दिवस ७</h3>
-						</div>
-						<div class=" text-center" style="background-color:#1FA4B6;margin-bottom: 2%;">
+                <div class="col-sm-4 portfolio-item">
+                    <div class="portfolio-link" data-toggle="modal" style="background-color:#1FA4B6;border: 2px dotted;">
+                        <div class="col-lg-12 text-center">
+                            <h3>श्रीमद् भागवत कथा- दिवस ७</h3>
+                        </div>
+                        <div class=" text-center" style="background-color:#1FA4B6;margin-bottom: 2%;">
                             <h4 class="fa fa-download"> भाग १</h4>
                             <audio controls>
                                 <source src="https://drive.google.com/uc?export=download&id=0B2WPWsiJ_nRZZm92aWY1OVNOakk" type="audio/mpeg">
                             </audio>
-						</div>
-						<div style="text-align: center;"><div id="circle"> </div><div id="circle"> </div><div id="circle"> </div></div>
-					</div>
+                        </div>
+                        <div style="text-align: center;"><div id="circle"> </div><div id="circle"> </div><div id="circle"> </div></div>
+                    </div>
                 </div>
-				<div class="col-sm-4 portfolio-item">
-					<div class="portfolio-link" data-toggle="modal" style="background-color:#1FA4B6;border: 2px dotted;">
-						<div class="col-lg-12 text-center">
-							<h3>श्रीमद् भागवत कथा- दिवस ८</h3>
-						</div>
-						<div class=" text-center" style="background-color:#1FA4B6;margin-bottom: 2%;">
+                <div class="col-sm-4 portfolio-item">
+                    <div class="portfolio-link" data-toggle="modal" style="background-color:#1FA4B6;border: 2px dotted;">
+                        <div class="col-lg-12 text-center">
+                            <h3>श्रीमद् भागवत कथा- दिवस ८</h3>
+                        </div>
+                        <div class=" text-center" style="background-color:#1FA4B6;margin-bottom: 2%;">
                             <h4 class="fa fa-download"> भाग १</h4>
                             <audio controls>
                                 <source src="https://drive.google.com/uc?export=download&id=0B2WPWsiJ_nRZYi1WU2Y3QV9RdFk" type="audio/mpeg">
                             </audio>
-						</div>
-						<div style="text-align: center;"><div id="circle"> </div><div id="circle"> </div><div id="circle"> </div></div>
-					</div>
+                        </div>
+                        <div style="text-align: center;"><div id="circle"> </div><div id="circle"> </div><div id="circle"> </div></div>
+                    </div>
                 </div>
             </div>
-			<!-- Sant Katha Section -->
-			
+            
         </div>
-    </section>
+    </section>  -->
   
-    <!-- Footer -->
+    <!-- Footer 
     <footer class="text-center">
         <div class="footer-below">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12">
-                        श्रीकृष्णकृपांकित श्री.विकासानंद महाराज मिसाळ,<br>श्रीक्षेत्र - पिंपळगाव वाघा , ता.जि.अ.नगर
+                        <h2>संत कथा</h2>
+                        <hr class="star-primary">
+                        - श्रीकृष्णकृपांकित श्री.विकासानंद महाराज मिसाळ,<br>श्रीक्षेत्र - पिंपळगाव वाघा , ता.जि.अ.नगर
                     </div>
                 </div>
             </div>
         </div>
-    </footer>
+    </footer>-->
 
     <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
-    <div class="scroll-top page-scroll visible-xs visble-sm">
+    <!-- <div class="scroll-top page-scroll visible-xs visble-sm">
         <a class="btn btn-primary" href="#page-top">
             <i class="fa fa-chevron-up"></i>
         </a>
-    </div>
-
-    <!-- Portfolio Modals -->
-    <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
-                <div class="lr">
-                    <div class="rl">
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 col-lg-offset-2">
-                        <div class="modal-body">
-                            <h2>Project Title</h2>
-                            <hr class="star-primary">
-                            <img src="img/portfolio/cabin.png" class="img-responsive img-centered" alt="">
-                            <p>Use this area of the page to describe your project. The icon above is part of a free icon set by <a href="https://sellfy.com/p/8Q9P/jV3VZ/">Flat Icons</a>. On their website, you can download their free set with 16 icons, or you can purchase the entire set with 146 icons for only $12!</p>
-                            <ul class="list-inline item-details">
-                                <li>Client:
-                                    <strong><a href="http://startbootstrap.com">Start Bootstrap</a>
-                                    </strong>
-                                </li>
-                                <li>Date:
-                                    <strong><a href="http://startbootstrap.com">April 2014</a>
-                                    </strong>
-                                </li>
-                                <li>Service:
-                                    <strong><a href="http://startbootstrap.com">Web Development</a>
-                                    </strong>
-                                </li>
-                            </ul>
-                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
-                <div class="lr">
-                    <div class="rl">
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 col-lg-offset-2">
-                        <div class="modal-body">
-                            <h2>Project Title</h2>
-                            <hr class="star-primary">
-                            <img src="img/portfolio/cake.png" class="img-responsive img-centered" alt="">
-                            <p>Use this area of the page to describe your project. The icon above is part of a free icon set by <a href="https://sellfy.com/p/8Q9P/jV3VZ/">Flat Icons</a>. On their website, you can download their free set with 16 icons, or you can purchase the entire set with 146 icons for only $12!</p>
-                            <ul class="list-inline item-details">
-                                <li>Client:
-                                    <strong><a href="http://startbootstrap.com">Start Bootstrap</a>
-                                    </strong>
-                                </li>
-                                <li>Date:
-                                    <strong><a href="http://startbootstrap.com">April 2014</a>
-                                    </strong>
-                                </li>
-                                <li>Service:
-                                    <strong><a href="http://startbootstrap.com">Web Development</a>
-                                    </strong>
-                                </li>
-                            </ul>
-                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
-                <div class="lr">
-                    <div class="rl">
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 col-lg-offset-2">
-                        <div class="modal-body">
-                            <h2>Project Title</h2>
-                            <hr class="star-primary">
-                            <img src="img/portfolio/circus.png" class="img-responsive img-centered" alt="">
-                            <p>Use this area of the page to describe your project. The icon above is part of a free icon set by <a href="https://sellfy.com/p/8Q9P/jV3VZ/">Flat Icons</a>. On their website, you can download their free set with 16 icons, or you can purchase the entire set with 146 icons for only $12!</p>
-                            <ul class="list-inline item-details">
-                                <li>Client:
-                                    <strong><a href="http://startbootstrap.com">Start Bootstrap</a>
-                                    </strong>
-                                </li>
-                                <li>Date:
-                                    <strong><a href="http://startbootstrap.com">April 2014</a>
-                                    </strong>
-                                </li>
-                                <li>Service:
-                                    <strong><a href="http://startbootstrap.com">Web Development</a>
-                                    </strong>
-                                </li>
-                            </ul>
-                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
-                <div class="lr">
-                    <div class="rl">
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 col-lg-offset-2">
-                        <div class="modal-body">
-                            <h2>Project Title</h2>
-                            <hr class="star-primary">
-                            <img src="img/portfolio/game.png" class="img-responsive img-centered" alt="">
-                            <p>Use this area of the page to describe your project. The icon above is part of a free icon set by <a href="https://sellfy.com/p/8Q9P/jV3VZ/">Flat Icons</a>. On their website, you can download their free set with 16 icons, or you can purchase the entire set with 146 icons for only $12!</p>
-                            <ul class="list-inline item-details">
-                                <li>Client:
-                                    <strong><a href="http://startbootstrap.com">Start Bootstrap</a>
-                                    </strong>
-                                </li>
-                                <li>Date:
-                                    <strong><a href="http://startbootstrap.com">April 2014</a>
-                                    </strong>
-                                </li>
-                                <li>Service:
-                                    <strong><a href="http://startbootstrap.com">Web Development</a>
-                                    </strong>
-                                </li>
-                            </ul>
-                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="portfolio-modal modal fade" id="portfolioModal5" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
-                <div class="lr">
-                    <div class="rl">
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 col-lg-offset-2">
-                        <div class="modal-body">
-                            <h2>Project Title</h2>
-                            <hr class="star-primary">
-                            <img src="img/portfolio/safe.png" class="img-responsive img-centered" alt="">
-                            <p>Use this area of the page to describe your project. The icon above is part of a free icon set by <a href="https://sellfy.com/p/8Q9P/jV3VZ/">Flat Icons</a>. On their website, you can download their free set with 16 icons, or you can purchase the entire set with 146 icons for only $12!</p>
-                            <ul class="list-inline item-details">
-                                <li>Client:
-                                    <strong><a href="http://startbootstrap.com">Start Bootstrap</a>
-                                    </strong>
-                                </li>
-                                <li>Date:
-                                    <strong><a href="http://startbootstrap.com">April 2014</a>
-                                    </strong>
-                                </li>
-                                <li>Service:
-                                    <strong><a href="http://startbootstrap.com">Web Development</a>
-                                    </strong>
-                                </li>
-                            </ul>
-                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="portfolio-modal modal fade" id="portfolioModal6" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
-                <div class="lr">
-                    <div class="rl">
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 col-lg-offset-2">
-                        <div class="modal-body">
-                            <h2>Project Title</h2>
-                            <hr class="star-primary">
-                            <img src="img/portfolio/submarine.png" class="img-responsive img-centered" alt="">
-                            <p>Use this area of the page to describe your project. The icon above is part of a free icon set by <a href="https://sellfy.com/p/8Q9P/jV3VZ/">Flat Icons</a>. On their website, you can download their free set with 16 icons, or you can purchase the entire set with 146 icons for only $12!</p>
-                            <ul class="list-inline item-details">
-                                <li>Client:
-                                    <strong><a href="http://startbootstrap.com">Start Bootstrap</a>
-                                    </strong>
-                                </li>
-                                <li>Date:
-                                    <strong><a href="http://startbootstrap.com">April 2014</a>
-                                    </strong>
-                                </li>
-                                <li>Service:
-                                    <strong><a href="http://startbootstrap.com">Web Development</a>
-                                    </strong>
-                                </li>
-                            </ul>
-                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    </div> -->
 
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
@@ -492,17 +285,6 @@
     <!-- Custom Theme JavaScript -->
     <script src="js/freelancer.js"></script>
 	
-	<script>
-	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-	ga('create', 'UA-65297840-1', 'auto');
-	ga('send', 'pageview');
-
-	</script>
-
 </body>
 
 </html>
