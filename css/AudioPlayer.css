@@ -275,7 +275,7 @@ button {
             flex-wrap: wrap;
   }
   .ap--track {
-    margin-bottom: 10px;
+    margin-bottom: -6px;
     padding: 0 20px;
     -webkit-box-ordinal-group: 2;
     -webkit-order: 1;
@@ -323,7 +323,7 @@ button {
 .pl-list {
   width: 100%;
   max-width: 550px;
-  margin: 0 auto;
+  margin: -14px auto;
   padding: 30px 10px;
 }
 .pl-list > li {
