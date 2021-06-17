@@ -192,10 +192,10 @@ var AudioPlayer = (function() {
       playBtn.classList.remove('playing');
     }, false)
 
-    if(settings.autoPlay) {
-      audio.play();
-      plLi[index].classList.add('pl-current');
-    }
+    // if(settings.autoPlay) {
+    //   audio.play();
+    //   plLi[index].classList.add('pl-current');
+    // }
   }
 
 /**
