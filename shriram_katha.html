@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Vikasanand Misal Maharaj">
+    <meta name="author" content="Vikasanand Misal Maharaj">
+
+    <!-- http://ironsummitmedia.github.io/startbootstrap-freelancer/ -->
+    <title>आद्य जगदगुरु श्रीमद् शंकराचार्य वारकरी प्रतिष्ठान</title>
+
+	<meta property="og:title" content="आद्य जगदगुरु श्रीमद् शंकराचार्य वारकरी प्रतिष्ठान - Vikasanand Misal Maharaj"/>
+	<meta property="og:url" content="http://www.ajssvarkari.com/"/>
+	<meta property="og:image" content="http://www.ajssvarkari.com/img/main-img.png"/>
+	<meta property="og:image:width" content="180"/>
+	<meta property="og:image:height" content="85"/>
+	<meta property="og:description" content="Vikasanand Misal Maharaj"/>
+	<meta name="description" content="Vikasanand Misal Maharaj" />
+	<meta name="keywords" content="Vikasanand Misal Maharaj" />
+	<link href="http://www.ajssvarkari.com/img/main-img.png" rel="icon" />
+
+    <!-- Bootstrap Core CSS - Uses Bootswatch Flatly Theme: http://bootswatch.com/flatly/ -->
+    <link href="css/bootstrap.min.css?ver=1.0" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/freelancer.css?ver=3.0" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="font-awesome-4.1.0/css/font-awesome.min.css?ver=1.0" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="css/AudioPlayer.css">
+    <style>
+
+    #player{
+        position: relative;
+        max-width: 700px;
+        height: 500px;
+        border: solid 1px gray;
+    }
+    </style>
+
+ 
+
+</head>
+
+<body id="page-top" class="index">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <a href="apphome.html" style="color: #ffffff;">
+                <img src="img/logo_1.png" style="height:60px;margin-left: 7px;padding: 4px;" alt="आद्य जगद्गुरू श्रीमद् शंकराचार्य वारकरी प्रतिष्ठान"></img></a>
+
+                <button type="button" class="btn btn-default btn-sm" style="float: right; margin-top: 12px; margin-right: 11px;">
+                    <a href="apphome.html" style="color: #ffffff;"><span class="glyphicon glyphicon-home"></span></a>
+                </button>
+            </div>
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+    
+    
+
+    <!-- Header  -->
+    <header>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12" style="background-color: orange;">
+                    <h2>श्रीराम कथा</h2>
+                    <!-- <hr class="star-primary"> -->
+                    - श्रीकृष्णकृपांकित श्री.विकासानंद महाराज मिसाळ,<br>श्रीक्षेत्र - पिंपळगाव वाघा , ता.जि.अ.नगर
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Audio player container-->
+    <div id='player'></div>
+
+    <!-- Audio player js begin-->
+    <script src="js/AudioPlayer.js"></script>
+
+    <script>
+        // test image for web notifications
+        var iconImage = null;
+
+        AP.init({
+            container:'#player',//a string containing one CSS selector
+            volume   : 0.7,
+            autoPlay : false,
+            notification: false,
+            playList: [
+                {'icon': iconImage, 'title': 'भाग १', 'file': 'https://www.googleapis.com/drive/v3/files/11-8QBQi5vXE1ufTpGrZKoLgBX-H2-tS4?alt=media&key=AIzaSyA2YesleUCBAz1UycZIQs9wWI5K5-0yuLQ'},
+                {'icon': iconImage, 'title': 'भाग २', 'file': 'https://www.googleapis.com/drive/v3/files/17n8MXPAf7n4RpS2BIZVSWDPgv7LhC_Y_?alt=media&key=AIzaSyA2YesleUCBAz1UycZIQs9wWI5K5-0yuLQ'},
+                {'icon': iconImage, 'title': 'भाग ३', 'file': 'https://www.googleapis.com/drive/v3/files/1JZFTFC_oYqVu3wSHliCHDyjdir_udm3F?alt=media&key=AIzaSyA2YesleUCBAz1UycZIQs9wWI5K5-0yuLQ'},
+                {'icon': iconImage, 'title': 'भाग ४', 'file': 'https://www.googleapis.com/drive/v3/files/1KqiwXj3zGkrdMkJ_hWJK3qVx_hnT5S8x?alt=media&key=AIzaSyA2YesleUCBAz1UycZIQs9wWI5K5-0yuLQ'},
+                {'icon': iconImage, 'title': 'भाग ५', 'file': 'https://www.googleapis.com/drive/v3/files/1WbyhtD7Wtf1Brj4gCnQCoDEP972ntjYG?alt=media&key=AIzaSyA2YesleUCBAz1UycZIQs9wWI5K5-0yuLQ'},
+                {'icon': iconImage, 'title': 'भाग ६', 'file': 'https://www.googleapis.com/drive/v3/files/1ax6bIvnzQqXARUqGEEv_-M8EBpbGCpUV?alt=media&key=AIzaSyA2YesleUCBAz1UycZIQs9wWI5K5-0yuLQ'},
+                {'icon': iconImage, 'title': 'भाग ७', 'file': 'https://www.googleapis.com/drive/v3/files/1y8P7ss7GBjaSI-hTf_RWGbgwh9LQgIUM?alt=media&key=AIzaSyA2YesleUCBAz1UycZIQs9wWI5K5-0yuLQ'}
+          ]
+        });
+    </script>
+    <!-- Audio player js end-->
+
+     <!-- <section id="portfolio">
+        <div class="container">
+			<div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2>शिव कथा</h2>
+                    <hr class="star-primary">
+                </div>
+            </div>
+			<div class="row">                
+                <div class="col-sm-4 portfolio-item">
+					<div class="portfolio-link" data-toggle="modal" style="background-color:#1FA4B6;border: 2px dotted;">
+						<div class="col-lg-12 text-center">
+							<h3>शिव कथा- दिवस १</h3>
+						</div>
+						<div class=" text-center" style="background-color:#1FA4B6;margin-bottom: 2%;">
+                            <h4 class="fa fa-download"> भाग १</h4>
+							<audio controls controlsList="nodownload">
+                                <source src="https://drive.google.com/uc?export=download&id=0B2WPWsiJ_nRZSGNJcEZqbURNTmM" type="audio/mpeg">
+                            </audio>
+                            <hr class="star-primary">
+                            <h4 class="fa fa-download text-center"> भाग २</i>
+                            <audio controls controlsList="nodownload">
+                                <source src="https://drive.google.com/uc?export=download&id=0B2WPWsiJ_nRZY1ZkY0xwV29rLTA" type="audio/mpeg">
+                            </audio>
+						</div>
+						<div style="text-align: center;"><div id="circle"> </div><div id="circle"> </div><div id="circle"> </div></div>
+					</div>
+                </div>
+				<div class="col-sm-4 portfolio-item">
+					<div class="portfolio-link" data-toggle="modal" style="background-color:#1FA4B6;border: 2px dotted;">
+						<div class="col-lg-12 text-center">
+							<h3>शिव कथा- दिवस २</h3>
+						</div>
+						<div class=" text-center" style="background-color:#1FA4B6;margin-bottom: 2%;">
+                            <h4 class="fa fa-download"> भाग १</h4>
+                            <audio controls controlsList="nodownload">
+                                <source src="https://drive.google.com/uc?export=download&id=0B2WPWsiJ_nRZdFpScGtVOV9rMHc" type="audio/mpeg">
+                            </audio>
+                            <hr class="star-primary">
+                            <h4 class="fa fa-download"> भाग २</h4>
+                            <audio controls controlsList="nodownload">
+                                <source src="https://drive.google.com/uc?export=download&id=0B2WPWsiJ_nRZeGk4MHFITHBLTEU" type="audio/mpeg">
+                            </audio>
+						</div>
+						<div style="text-align: center;"><div id="circle"> </div><div id="circle"> </div><div id="circle"> </div></div>
+					</div>
+                </div>
+				<div class="col-sm-4 portfolio-item">
+					<div class="portfolio-link" data-toggle="modal" style="background-color:#1FA4B6;border: 2px dotted;">
+						<div class="col-lg-12 text-center">
+							<h3>शिव कथा- दिवस ३</h3>
+						</div>
+						<div class=" text-center" style="background-color:#1FA4B6;margin-bottom: 2%;">
+                            <h4 class="fa fa-download"> भाग १</h4>
+                            <audio controls controlsList="nodownload">
+                                <source src="https://drive.google.com/uc?export=download&id=0B2WPWsiJ_nRZNkx3WUtHeXpyaHM" type="audio/mpeg">
+                            </audio>
+                            <hr class="star-primary">
+                            <h4 class="fa fa-download"> भाग २</h4>
+                            <audio controls controlsList="nodownload">
+                                <source src="https://drive.google.com/uc?export=download&id=0B2WPWsiJ_nRZTlZUaGctYXd1bkE" type="audio/mpeg">
+                            </audio>
+                            <hr class="star-primary">
+                            <h4 class="fa fa-download"> भाग ३</h4>
+                            <audio controls controlsList="nodownload">
+                                <source src="https://drive.google.com/uc?export=download&id=0B2WPWsiJ_nRZNTkyQ2h4Wkl3SlU" type="audio/mpeg">
+                            </audio>
+						</div>
+						<div style="text-align: center;"><div id="circle"> </div><div id="circle"> </div><div id="circle"> </div></div>
+					</div>
+                </div>
+				<div class="col-sm-4 portfolio-item">
+					<div class="portfolio-link" data-toggle="modal" style="background-color:#1FA4B6;border: 2px dotted;">
+						<div class="col-lg-12 text-center">
+							<h3>शिव कथा- दिवस ४</h3>
+						</div>
+						<div class=" text-center" style="background-color:#1FA4B6;margin-bottom: 2%;">
+                            <h4 class="fa fa-download"> भाग १</h4>
+                            <audio controls controlsList="nodownload">
+                                <source src="https://drive.google.com/uc?export=download&id=0B2WPWsiJ_nRZZU0weDR0eHZGLTg" type="audio/mpeg">
+                            </audio>
+                            <hr class="star-primary">
+                            <h4 class="fa fa-download"> भाग २</h4>
+                            <audio controls controlsList="nodownload">
+                                <source src="https://drive.google.com/uc?export=download&id=0B2WPWsiJ_nRZWVE1Y3BnVXdiVjQ" type="audio/mpeg">
+                            </audio>
+                            <hr class="star-primary">
+                            <h4 class="fa fa-download"> भाग ३</h4>
+                            <audio controls controlsList="nodownload">
+                                <source src="https://drive.google.com/uc?export=download&id=0B2WPWsiJ_nRZYVRLSXBWc3prRUU" type="audio/mpeg">
+                            </audio>
+						</div>
+						<div style="text-align: center;"><div id="circle"> </div><div id="circle"> </div><div id="circle"> </div></div>
+					</div>
+                </div>
+				<div class="col-sm-4 portfolio-item">
+					<div class="portfolio-link" data-toggle="modal" style="background-color:#1FA4B6;border: 2px dotted;">
+						<div class="col-lg-12 text-center">
+							<h3>शिव कथा- दिवस ५</h3>
+						</div>
+						<div class=" text-center" style="background-color:#1FA4B6;margin-bottom: 2%;">
+                            <h4 class="fa fa-download"> भाग १</h4>
+                            <audio controls controlsList="nodownload">
+                                <source src="https://drive.google.com/uc?export=download&id=0B2WPWsiJ_nRZN0tqcWVScFhOa28" type="audio/mpeg">
+                            </audio>
+                            <hr class="star-primary">
+                            <h4 class="fa fa-download"> भाग २</h4>
+                            <audio controls controlsList="nodownload">
+                                <source src="https://drive.google.com/uc?export=download&id=0B2WPWsiJ_nRZc2VHLXRIeDRRdUU" type="audio/mpeg">
+                            </audio>
+                            <hr class="star-primary">
+                            <h4 class="fa fa-download"> भाग ३</h4>
+                            <audio controls controlsList="nodownload">
+                                <source src="https://drive.google.com/uc?export=download&id=0B2WPWsiJ_nRZQ21Kcjh6Y0x4TzA" type="audio/mpeg">
+                            </audio>
+						</div>
+						<div style="text-align: center;"><div id="circle"> </div><div id="circle"> </div><div id="circle"> </div></div>
+					</div>
+                </div>
+				<div class="col-sm-4 portfolio-item">
+					<div class="portfolio-link" data-toggle="modal" style="background-color:#1FA4B6;border: 2px dotted;">
+						<div class="col-lg-12 text-center">
+							<h3>शिव कथा- दिवस ६</h3>
+						</div>
+						<div class=" text-center" style="background-color:#1FA4B6;margin-bottom: 2%;">
+                            <h4 class="fa fa-download"> भाग १</h4>
+                            <audio controls controlsList="nodownload">
+                                <source src="https://drive.google.com/uc?export=download&id=0B2WPWsiJ_nRZQ080bHJJaDdoSUU" type="audio/mpeg">
+                            </audio>
+                            <hr class="star-primary">
+                            <h4 class="fa fa-download"> भाग २</h4>
+                            <audio controls controlsList="nodownload">
+                                <source src="https://drive.google.com/uc?export=download&id=0B2WPWsiJ_nRZZENvWEsyV2poY0k" type="audio/mpeg">
+                            </audio>
+                            <hr class="star-primary">
+                            <h4 class="fa fa-download"> भाग ३</h4>
+                            <audio controls controlsList="nodownload">
+                                <source src="https://drive.google.com/uc?export=download&id=0B2WPWsiJ_nRZVjVUbk81NHJ1OVU" type="audio/mpeg">
+                            </audio>
+						</div>
+						<div style="text-align: center;"><div id="circle"> </div><div id="circle"> </div><div id="circle"> </div></div>
+					</div>
+                </div>
+				<div class="col-sm-4 portfolio-item">
+					<div class="portfolio-link" data-toggle="modal" style="background-color:#1FA4B6;border: 2px dotted;">
+						<div class="col-lg-12 text-center">
+							<h3>शिव कथा- दिवस ७</h3>
+						</div>
+						<div class=" text-center" style="background-color:#1FA4B6;margin-bottom: 2%;">
+                            <h4 class="fa fa-download"> भाग १</h4>
+                            <audio controls controlsList="nodownload">
+                                <source src="https://drive.google.com/uc?export=download&id=0B2WPWsiJ_nRZU0dWR1kzeVpoVE0" type="audio/mpeg">
+                            </audio>
+						</div>
+						<div style="text-align: center;"><div id="circle"> </div><div id="circle"> </div><div id="circle"> </div></div>
+					</div>
+                </div>				
+            </div>
+			
+        </div>
+    </section> -->
+  
+  
+    <!-- Footer 
+    <footer class="text-center">
+        <div class="footer-below">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h2>संत कथा</h2>
+                        <hr class="star-primary">
+                        - श्रीकृष्णकृपांकित श्री.विकासानंद महाराज मिसाळ,<br>श्रीक्षेत्र - पिंपळगाव वाघा , ता.जि.अ.नगर
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>-->
+
+    <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
+    <!-- <div class="scroll-top page-scroll visible-xs visble-sm">
+        <a class="btn btn-primary" href="#page-top">
+            <i class="fa fa-chevron-up"></i>
+        </a>
+    </div> -->
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+    <script src="js/classie.js"></script>
+    <script src="js/cbpAnimatedHeader.js"></script>
+
+    <!-- Contact Form JavaScript -->
+    <script src="js/jqBootstrapValidation.js"></script>
+    <script src="js/contact_me.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="js/freelancer.js"></script>
+	
+</body>
+
+</html>
